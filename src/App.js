@@ -44,7 +44,8 @@ class App extends Component {
                 score: this.state.score + 1,
                 notice: "You guessed correctly!",
             })
-            console.log(this.state.score)
+            console.log(this.state.score) 
+            //this will not reflect new change but i can do a if in render and call a function to setstate again
             
             if (this.state.topScore <= this.state.score) {
                 this.setState({
@@ -88,7 +89,7 @@ class App extends Component {
                 </div>
             </nav>
 
-            <Container>
+            <Container notice={this.state.notice}>
                 {this.state.images.map(pictures => (
                     <Characters
                         // feed funciton to front end on lick function aka characters component
@@ -97,7 +98,6 @@ class App extends Component {
                         key = {pictures.id}
                         image={pictures.image}
                         arr = {this.state.images}
-                        notice={this.state.notice}
                     />
                 ))}
             </Container>
