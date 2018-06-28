@@ -5,8 +5,7 @@
     justify-content: space-around;
     align-content: flex-start;
     overflow: auto;
-    float: left;
-    margin: 2% 10rem;
+    margin: 0 auto;
     padding-top: 5%;
 }
 
